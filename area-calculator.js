@@ -1,47 +1,47 @@
- function triangleArea(){
-   const baseField= document.getElementById('triangle-base');
-   const baseValue = baseField.value;
-   const base      = parseFloat(baseValue);
+function triangleArea() {
+  const base = getInputValue("triangle-base");
+  const height = getInputValue("triangle-height");
+  const triangleArea = 0.5 * base * height;
+  setArea("triangle-area", triangleArea);
+  clearOut("triangle-base", "triangle-height");
+}
 
-   const heightField= document.getElementById('triangle-height');
-   const heightValue = heightField.value;
-   const height      = parseFloat(heightValue);
+function rectangleArea() {
+  const width = getInputValue("rectangle-width");
+  const length = getInputValue("rectangle-length");
+  const rectangleArea = width * length;
+  setArea("rectangle-area", rectangleArea);
+  clearOut("rectangle-width", "rectangle-length");
+}
 
-   const triangleArea= 0.5*base*height;
-   const area =document.getElementById('triangle-area');
-   area.innerText= triangleArea;
-   baseField.value ='';
-   heightField.value ='';
- }
+function parallelogramArea() {
+  const base = getInputValue("parallelogram-base");
+  const height = getInputValue("parallelogram-height");
+  const parallelogramArea = base * height;
+  setArea("parallelogram-area", parallelogramArea);
+  clearOut("parallelogram-base", "parallelogram-height");
+}
 
- function rectangleArea(){
-    const widthField= document.getElementById('rectangle-width');
-    const widthValue = widthField.value;
-    const width      = parseFloat(widthValue);
- 
-    const lengthField= document.getElementById('rectangle-length');
-    const lengthValue = lengthField.value;
-    const length      = parseFloat(lengthValue);
- 
-    const rectangleArea= width*length;
-    const area =document.getElementById('rectangle-area');
-    area.innerText= rectangleArea;
-    widthField.value ='';
-    lengthField.value ='';
- }
+function rhombusArea() {
+  const d1 = getInputValue("rhombus-d1");
+  const d2 = getInputValue("rhombus-d2");
+  const rhombusArea = 0.5 * d1 * d2;
+  setArea("rhombus-area", rhombusArea);
+  clearOut("rhombus-d1", "rhombus-d2");
+}
 
- function parallelogramArea(){
-    const baseField= document.getElementById('parallelogram-base');
-   const baseValue = baseField.value;
-   const base      = parseFloat(baseValue);
+function pentagonArea() {
+  const p = getInputValue("pentagon-p");
+  const b = getInputValue("pentagon-b");
+  const pentagonArea = 0.5 * p * b;
+  setArea("pentagon-area", pentagonArea);
+  clearOut("pentagon-p", "pentagon-b");
+}
 
-   const heightField= document.getElementById('parallelogram-height');
-   const heightValue = heightField.value;
-   const height      = parseFloat(heightValue);
-
-   const parallelogramArea= base*height;
-   const area =document.getElementById('parallelogram-area');
-   area.innerText= parallelogramArea;
-   baseField.value ='';
-   heightField.value ='';
- }
+function ellipseArea() {
+  const major = getInputValue("ellipse-major");
+  const minor = getInputValue("ellipse-minor");
+  const ellipseArea = 3.1416 * major * minor;
+  setArea("ellipse-area", ellipseArea);
+  clearOut("ellipse-major", "ellipse-minor");
+}

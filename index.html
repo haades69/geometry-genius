@@ -94,8 +94,15 @@
           <div class="card-body items-center text-center">
             <h2 class="card-title">Rhombus</h2>
             <p>Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
-            <div class="card-actions">
-              <button class="btn btn-primary">Calculate</button>
+            <p>
+                <input type="text" class="border w-20 px-2" placeholder="d1" id="rhombus-d1">
+                <span class="ml-2">cm</span>
+                <input type="text" class="ml-3 border w-20 px-2" placeholder="d2" id="rhombus-d2">
+                <span class="ml-2">cm</span>
+            </p>
+            <p class="text-2xl">Area: <span id="rhombus-area">0</span> cm<sup>2</sup></p>
+            <div class="card-actions w-full">
+              <button onclick="rhombusArea()" class="btn btn-primary w-full">Calculate</button>
             </div>
           </div>
         </div>
@@ -106,8 +113,15 @@
           <div class="card-body items-center text-center">
             <h2 class="card-title">Pentagon</h2>
             <p>Area (A) = 0.5 x p x b</p>
-            <div class="card-actions">
-              <button class="btn btn-primary">Calculate</button>
+            <p>
+                <input type="text" class="border w-20 px-2" placeholder="p" id="pentagon-p">
+                <span class="ml-2">cm</span>
+                <input type="text" class="ml-3 border w-20 px-2" placeholder="b" id="pentagon-b">
+                <span class="ml-2">cm</span>
+            </p>
+            <p class="text-2xl">Area: <span id="pentagon-area">0</span> cm<sup>2</sup></p>
+            <div class="card-actions w-full">
+              <button onclick="pentagonArea()" class="btn btn-primary w-full">Calculate</button>
             </div>
           </div>
         </div>
@@ -117,9 +131,16 @@
           </figure>
           <div class="card-body items-center text-center">
             <h2 class="card-title">Ellipse</h2>
-            <p>Area (A) = ab</p>
-            <div class="card-actions">
-              <button class="btn btn-primary">Calculate</button>
+            <p>Area (A) = pi x a x b</p>
+            <p>
+                <input type="text" class="border w-20 px-2" placeholder="major" id="ellipse-major">
+                <span class="ml-2">cm</span>
+                <input type="text" class="ml-3 border w-20 px-2" placeholder="minor" id="ellipse-minor">
+                <span class="ml-2">cm</span>
+            </p>
+            <p class="text-2xl">Area: <span id="ellipse-area">0</span> cm<sup>2</sup></p>
+            <div class="card-actions w-full">
+              <button onclick="ellipseArea()" class="btn btn-primary w-full">Calculate</button>
             </div>
           </div>
         </div>
@@ -129,6 +150,7 @@
         <h1 class="text-3xl"><u>Area Calculation</u></h1>
       </div>
     </main>
+    <script src="utilities.js"></script>
     <script src="area-calculator.js"></script>
   </body>
 </html>
